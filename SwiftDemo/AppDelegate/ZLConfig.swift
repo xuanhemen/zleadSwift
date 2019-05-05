@@ -11,6 +11,7 @@ import UIKit
 class ZLConfig: NSObject {
 
     static func chooseRootController(){
-        
+        let vc = ZLTabBarController()
+        UIApplication.shared.keyWindow?.rootViewController = vc
     }
 }

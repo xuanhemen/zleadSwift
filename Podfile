@@ -1,6 +1,5 @@
-platform:ios,'10.0'
+platform:ios,'9.0'
 inhibit_all_warnings!
-
 target 'SwiftDemo' do
 pod 'Alamofire'
 pod 'HandyJSON'
