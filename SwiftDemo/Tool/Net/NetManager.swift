@@ -11,7 +11,6 @@ import Alamofire
 
 class NetManager: NSObject {
 
-
     typealias Success = (_ response:Dictionary<String,Any>) -> Void //成功回调
     typealias Failure = (_ failMag:Dictionary<String,Any>) -> Void //失败回调（不是网络请求失败的回调）
     
@@ -28,14 +27,19 @@ class NetManager: NSObject {
                             parameters: [String:String],
                             success:@escaping Success,
                             fail:@escaping Failure){
+
         Alamofire.request(url, method: method, parameters: parameters, encoding: URLEncoding.default).responseJSON { (response) in
             response.result.ifSuccess {
                 let dic = response.result.value as! Dictionary<String, Any>
                 success(dic)
-                
+                #if DEBUG
+                let data = try? JSONSerialization.data(withJSONObject: dic, options: [])
+                let jsonStr = NSString(data:data!,encoding: String.Encoding.utf8.rawValue)
+                dLog(jsonStr)
+                #endif
             }
-            response.result.ifFailure {
-                print("请求失败")
+            response.result.ifFailure { //真正失败
+                print("请求失败%@",response)
             }
             
             

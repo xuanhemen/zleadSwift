@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftyJSON
 class ZLBaseViewController: UIViewController {
 
     override func viewDidLoad() {

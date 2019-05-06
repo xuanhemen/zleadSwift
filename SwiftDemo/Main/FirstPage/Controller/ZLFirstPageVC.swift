@@ -8,14 +8,20 @@
 
 import UIKit
 
+
 class ZLFirstPageVC: ZLBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .blue
         
-       
-        self.view.endEditing(true)
+        let params = ["districtId":"6B9E6B70C8784DB381AFAAD16EE82505"]
+        NetManager.requestData(url: "http://fp.fjcz.gov.cn/yscms/app/getSPFInfo.do", method: .post, parameters: params, success: { (result) in
+        
+        }) { (errorResult) in
+            
+        }
+        
         
         // Do any additional setup after loading the view.
     }

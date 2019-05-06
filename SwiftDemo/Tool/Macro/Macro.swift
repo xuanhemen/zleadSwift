@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import SnapKit
+
 
 
 /** debug下打印 */
@@ -25,7 +27,7 @@ let kScreenWidth = UIScreen.main.bounds.size.width
 /** 屏幕高度 */
 let kScreenHeight = UIScreen.main.bounds.size.height
 /** 是否是X */
-let isX:Bool = UIScreen.main.bounds.size.width == 812 ? true:false
+let isX:Bool = UIScreen.main.bounds.size.height >= 812 ? true:false
 /** 导航高度 */
 let kNavHeight = isX ? 88 : 64
 

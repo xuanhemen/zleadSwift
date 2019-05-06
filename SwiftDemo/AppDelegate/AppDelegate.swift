@@ -18,9 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.makeKeyAndVisible()
         ZLConfig.chooseRootController()
+    
         
-        dLog(kScreenWidth)
-        dLog(kScreenHeight)
         
         // Override point for customization after application launch.
         return true

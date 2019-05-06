@@ -21,6 +21,11 @@
 		7A11D1732275546E00D782C8 /* ZLTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A11D1722275546E00D782C8 /* ZLTabBarController.swift */; };
 		7A11D17522758CBC00D782C8 /* NetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A11D17422758CBC00D782C8 /* NetManager.swift */; };
 		7A63BFD42275B161003EFE7E /* Macro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A63BFD32275B161003EFE7E /* Macro.swift */; };
+		7ABD860D227EC9A500F76785 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABD860C227EC9A500F76785 /* BaseModel.swift */; };
+		7ABD860F227ECA4200F76785 /* SpecialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABD860E227ECA4200F76785 /* SpecialModel.swift */; };
+		7ABD8613227ED63B00F76785 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABD8612227ED63B00F76785 /* ItemViewModel.swift */; };
+		7ABD8615227EE16300F76785 /* ZLViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABD8614227EE16300F76785 /* ZLViewModel.swift */; };
+		7ABD8617227EE1AB00F76785 /* SpecialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABD8616227EE1AB00F76785 /* SpecialViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,11 @@
 		7A11D17422758CBC00D782C8 /* NetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManager.swift; sourceTree = "<group>"; };
 		7A1C590D22768FA90056A973 /* SwiftDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		7A63BFD32275B161003EFE7E /* Macro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Macro.swift; sourceTree = "<group>"; };
+		7ABD860C227EC9A500F76785 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		7ABD860E227ECA4200F76785 /* SpecialModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialModel.swift; sourceTree = "<group>"; };
+		7ABD8612227ED63B00F76785 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		7ABD8614227EE16300F76785 /* ZLViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLViewModel.swift; sourceTree = "<group>"; };
+		7ABD8616227EE1AB00F76785 /* SpecialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialViewModel.swift; sourceTree = "<group>"; };
 		C1A0B2596CB08287BF1B5747 /* libPods-SwiftDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwiftDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -159,10 +169,10 @@
 		7A11D15D22754B2C00D782C8 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				7A1C590D22768FA90056A973 /* SwiftDemo-Bridging-Header.h */,
 				7A1C59162276AC7C0056A973 /* Macro */,
 				7A1C5912227690DC0056A973 /* Category */,
 				7A1C5911227690B40056A973 /* Net */,
-				7A1C590D22768FA90056A973 /* SwiftDemo-Bridging-Header.h */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -203,6 +213,8 @@
 			children = (
 				7A11D1682275521800D782C8 /* ZLBaseViewController.swift */,
 				7A11D1722275546E00D782C8 /* ZLTabBarController.swift */,
+				7ABD860C227EC9A500F76785 /* BaseModel.swift */,
+				7ABD8614227EE16300F76785 /* ZLViewModel.swift */,
 			);
 			path = BaseClass;
 			sourceTree = "<group>";
@@ -272,6 +284,7 @@
 		7AE42D7122784C0100EFD4A0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7ABD860E227ECA4200F76785 /* SpecialModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -279,6 +292,8 @@
 		7AE42D7222784C0A00EFD4A0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7ABD8616227EE1AB00F76785 /* SpecialViewModel.swift */,
+				7ABD8612227ED63B00F76785 /* ItemViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -506,13 +521,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A63BFD42275B161003EFE7E /* Macro.swift in Sources */,
+				7ABD8617227EE1AB00F76785 /* SpecialViewModel.swift in Sources */,
 				7A11D17522758CBC00D782C8 /* NetManager.swift in Sources */,
 				7A11D167227550C800D782C8 /* ZLConfig.swift in Sources */,
 				7A11D12F2275463600D782C8 /* AppDelegate.swift in Sources */,
+				7ABD860D227EC9A500F76785 /* BaseModel.swift in Sources */,
+				7ABD8613227ED63B00F76785 /* ItemViewModel.swift in Sources */,
 				7A11D171227553DF00D782C8 /* ZLPersonalCenterVC.swift in Sources */,
 				7A11D16F227553A200D782C8 /* ZLFirstPageVC.swift in Sources */,
 				7A11D1692275521800D782C8 /* ZLBaseViewController.swift in Sources */,
 				7A11D1732275546E00D782C8 /* ZLTabBarController.swift in Sources */,
+				7ABD8615227EE16300F76785 /* ZLViewModel.swift in Sources */,
+				7ABD860F227ECA4200F76785 /* SpecialModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
