@@ -28,6 +28,7 @@ class NetManager: NSObject {
                             success:@escaping Success,
                             fail:@escaping Failure){
 
+        
         Alamofire.request(url, method: method, parameters: parameters, encoding: URLEncoding.default).responseJSON { (response) in
             response.result.ifSuccess {
                 let dic = response.result.value as! Dictionary<String, Any>

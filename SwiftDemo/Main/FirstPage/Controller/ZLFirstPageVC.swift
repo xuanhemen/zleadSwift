@@ -11,20 +11,28 @@ import UIKit
 
 class ZLFirstPageVC: ZLBaseViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .blue
+        self.view.backgroundColor = .white
+        self.view.addSubview(self.imgView)
+        self.view.addSubview(self.collectionView)
         
-        let params = ["districtId":"6B9E6B70C8784DB381AFAAD16EE82505"]
-        NetManager.requestData(url: "http://fp.fjcz.gov.cn/yscms/app/getSPFInfo.do", method: .post, parameters: params, success: { (result) in
-        
-        }) { (errorResult) in
-            
-        }
-        
-        
-        // Do any additional setup after loading the view.
     }
+    lazy var viewModel: SpecialViewModel = {
+        let viewModel = SpecialViewModel.init()
+        return viewModel
+    }()
+    lazy var collectionView: SpecialCollectionView = {
+        let mainView = SpecialCollectionView.init(frame: self.view.frame, viewModel: self.viewModel)
+        return mainView
+    }()
+    lazy var imgView: UIImageView = {
+        let imgView = UIImageView()
+        imgView.image = img("banner")
+        imgView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 135)
+        return imgView
+    }()
     
 
     /*

@@ -2,6 +2,9 @@ PODS:
   - Alamofire (4.8.2)
   - HandyJSON (4.2.1)
   - MJRefresh (3.1.16)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.5.0)
   - SnapKit (4.2.0)
   - SVProgressHUD (2.2.5)
   - SwiftyJSON (4.3.0)
@@ -10,6 +13,8 @@ DEPENDENCIES:
   - Alamofire
   - HandyJSON
   - MJRefresh
+  - RxCocoa
+  - RxSwift
   - SnapKit
   - SVProgressHUD
   - SwiftyJSON
@@ -19,6 +24,8 @@ SPEC REPOS:
     - Alamofire
     - HandyJSON
     - MJRefresh
+    - RxCocoa
+    - RxSwift
     - SnapKit
     - SVProgressHUD
     - SwiftyJSON
@@ -27,10 +34,12 @@ SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   HandyJSON: d0c5fc80204f29056d59d3e5c4587fa0b16b60a8
   MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 2236aaa3d7bf1fcf7132c8ebd98d4bceed7ba050
+PODFILE CHECKSUM: 9bc05ef99a049413c3205b52c0436e73a62f7c11
 
 COCOAPODS: 1.5.3
