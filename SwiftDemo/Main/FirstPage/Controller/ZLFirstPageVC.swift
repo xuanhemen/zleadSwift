@@ -14,10 +14,10 @@ class ZLFirstPageVC: ZLBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        
         self.view.addSubview(self.imgView)
         self.view.addSubview(self.collectionView)
-        
+       
     }
     lazy var viewModel: SpecialViewModel = {
         let viewModel = SpecialViewModel.init()
@@ -27,10 +27,8 @@ class ZLFirstPageVC: ZLBaseViewController {
         let mainView = SpecialCollectionView.init(frame: self.view.frame, viewModel: self.viewModel)
         return mainView
     }()
-    lazy var imgView: UIImageView = {
-        let imgView = UIImageView()
-        imgView.image = img("banner")
-        imgView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 135)
+    lazy var imgView: TopImgView = {
+        let imgView = TopImgView.init(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: 135), viewModel: self.viewModel)
         return imgView
     }()
     

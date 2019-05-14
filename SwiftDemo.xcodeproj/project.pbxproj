@@ -30,6 +30,7 @@
 		7ABD8613227ED63B00F76785 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABD8612227ED63B00F76785 /* ItemViewModel.swift */; };
 		7ABD8615227EE16300F76785 /* ZLViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABD8614227EE16300F76785 /* ZLViewModel.swift */; };
 		7ABD8617227EE1AB00F76785 /* SpecialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABD8616227EE1AB00F76785 /* SpecialViewModel.swift */; };
+		7AC6B86722891B6D00F8164C /* TopImgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC6B86622891B6D00F8164C /* TopImgView.swift */; };
 		7AD3B5732282D5C2006DF9E5 /* ZLSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3B5722282D5C2006DF9E5 /* ZLSetViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		7ABD8612227ED63B00F76785 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		7ABD8614227EE16300F76785 /* ZLViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLViewModel.swift; sourceTree = "<group>"; };
 		7ABD8616227EE1AB00F76785 /* SpecialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialViewModel.swift; sourceTree = "<group>"; };
+		7AC6B86622891B6D00F8164C /* TopImgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopImgView.swift; sourceTree = "<group>"; };
 		7AD3B5722282D5C2006DF9E5 /* ZLSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLSetViewController.swift; sourceTree = "<group>"; };
 		C1A0B2596CB08287BF1B5747 /* libPods-SwiftDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SwiftDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -299,6 +301,7 @@
 			children = (
 				7A72AFB4227FCE25000F1691 /* SpecialCollectionView.swift */,
 				7A72AFBC2280069A000F1691 /* SpecialCollectionViewCell.swift */,
+				7AC6B86622891B6D00F8164C /* TopImgView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				7A72AFB5227FCE25000F1691 /* SpecialCollectionView.swift in Sources */,
 				7A1E2FA2228515AE00FD9066 /* ZLNavViewController.swift in Sources */,
 				7A11D16F227553A200D782C8 /* ZLFirstPageVC.swift in Sources */,
+				7AC6B86722891B6D00F8164C /* TopImgView.swift in Sources */,
 				7A11D1692275521800D782C8 /* ZLBaseViewController.swift in Sources */,
 				7A11D1732275546E00D782C8 /* ZLTabBarController.swift in Sources */,
 				7ABD8615227EE16300F76785 /* ZLViewModel.swift in Sources */,

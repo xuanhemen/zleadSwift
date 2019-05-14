@@ -12,10 +12,19 @@ class SpecialViewModel: ZLViewModel,UICollectionViewDelegate,UICollectionViewDat
 
     var specialArr = [ItemViewModel]()  //数据源
     var observable: Observable<String>?
+    var frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 135)
+    var imgframe: CGRect = CGRect(x: 0, y: 0, width: kScreenWidth, height: 135) {
+        didSet {
+            distanceSubject.onNext(imgframe)
+        }
+    }
+    var distanceSubject = PublishSubject<CGRect>()
+    let imgHeight = 135
+    
     override init() {
         super.init()
         self.requestData()
-        
+       
     }
     /** 请求数据 */
     func requestData() {
@@ -26,7 +35,6 @@ class SpecialViewModel: ZLViewModel,UICollectionViewDelegate,UICollectionViewDat
         NetManager.requestData(url: "http://fp.fjcz.gov.cn/yscms/app/getSPFInfo.do", method: .post, parameters: params, success: { (result) in
             if let jsonObjc = JSON(result).dictionary,let dic = jsonObjc["result"]?.dictionary,let array = dic["SPFList"]?.arrayObject{
                 let modelArr = [SpecialModel].deserialize(from: array)
-                dLog("数组\(String(describing: modelArr?.count))")
                 modelArr?.forEach({ (specialModel) in
                     let model = ItemViewModel()
                     model.name = specialModel?.JCNAME ?? ""
@@ -62,8 +70,19 @@ class SpecialViewModel: ZLViewModel,UICollectionViewDelegate,UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
         
     }
+   
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let distance = scrollView.contentOffset.y
+        let distance = Int(scrollView.contentOffset.y)
+        if distance >= -imgHeight {
+             self.imgframe.origin.y = -CGFloat(imgHeight+distance)
+             return
+        }
+        var frame = self.frame
+        let ofY = -CGFloat(imgHeight+distance)
+        frame.size.height = self.frame.size.height+ofY
+        frame.size.width = kScreenWidth+kScreenWidth/CGFloat(imgHeight)*ofY
+        frame.origin.x = -(frame.size.width-kScreenWidth)/2
+        self.imgframe = frame
         
         
     }
